@@ -1,0 +1,9 @@
+{
+  "name": "global-weather-clock",
+  "version": "1.0.0",
+  "description": "An edge computing weather application built on Alibaba Cloud ESA.",
+  "private": true,
+  "scripts": {
+    "build": "echo 'No build step required for static site.'"
+  }
+}
