@@ -1,5 +1,6 @@
 {
   "name": "global-weather-clock",
+  "entry": "index.js",
   "installCommand": "",
   "buildCommand": "",
   "assets": {
