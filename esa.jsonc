@@ -1,0 +1,8 @@
+{
+  "name": "global-weather-clock",
+  "installCommand": "",
+  "buildCommand": "",
+  "assets": {
+    "directory": "."
+  }
+}
