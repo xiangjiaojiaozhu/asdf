@@ -1,2 +1,0 @@
-# asdf
-for Ali competition
