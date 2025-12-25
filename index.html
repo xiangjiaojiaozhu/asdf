@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>全球天气时钟 | ESA边缘应用</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-globe-americas"></i> 全球天气时钟</h1>
+            <p class="subtitle">基于阿里云ESA Pages构建的边缘计算应用</p>
+            <p class="tip">无需手动选择城市，自动定位您的位置并获取实时天气</p>
+        </header>
+
+        <main>
+            <div class="card">
+                <div class="location-section">
+                    <h2><i class="fas fa-map-marker-alt"></i> 当前位置</h2>
+                    <div class="info-row">
+                        <div class="info-box">
+                            <div class="label">国家/地区</div>
+                            <div id="country" class="value">--</div>
+                        </div>
+                        <div class="info-box">
+                            <div class="label">城市</div>
+                            <div id="city" class="value">--</div>
+                        </div>
+                        <div class="info-box">
+                            <div class="label">IP地址</div>
+                            <div id="ip" class="value">--</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="datetime-section">
+                    <h2><i class="far fa-clock"></i> 本地时间</h2>
+                    <div id="local-time" class="time-display">--:--:--</div>
+                    <div id="local-date" class="date-display">----年--月--日 星期-</div>
+                    <div class="timezone">时区: <span id="timezone">--</span></div>
+                </div>
+
+                <div class="weather-section">
+                    <h2><i class="fas fa-cloud-sun"></i> 实时天气</h2>
+                    <div class="weather-main">
+                        <div class="weather-icon">
+                            <i id="weather-icon" class="fas fa-question"></i>
+                        </div>
+                        <div class="weather-details">
+                            <div class="temperature">
+                                <span id="temp">--</span><span class="unit">°C</span>
+                            </div>
+                            <div id="weather-desc" class="description">获取中...</div>
+                        </div>
+                    </div>
+                    <div class="weather-extras">
+                        <div class="extra-item">
+                            <i class="fas fa-temperature-high"></i>
+                            <div>体感温度: <span id="feels-like">--</span>°C</div>
+                        </div>
+                        <div class="extra-item">
+                            <i class="fas fa-tint"></i>
+                            <div>湿度: <span id="humidity">--</span>%</div>
+                        </div>
+                        <div class="extra-item">
+                            <i class="fas fa-wind"></i>
+                            <div>风速: <span id="wind-speed">--</span> m/s</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cache-info">
+                    <p><i class="fas fa-bolt"></i> 本应用运行于最近的阿里云边缘节点，数据延迟仅 <span id="latency">--</span> ms</p>
+                    <p id="cache-status"><i class="fas fa-database"></i> 缓存状态: 正在检查...</p>
+                </div>
+            </div>
+
+            <div class="tech-badge">
+                本项目由阿里云ESA提供加速、计算和保护
+            </div>
+        </main>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
